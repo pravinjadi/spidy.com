@@ -1,0 +1,49 @@
+/* Set the body background color */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f0f0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide scroll during video playback */
+}
+
+/* Video Overlay Styles */
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide elements with the hidden class */
+.hidden {
+    display: none;
+}
+
+/* Main Content Styles */
+#main-content {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 2s ease, transform 2s ease;
+    padding: 20px;
+    align-items: end;
+}
+
+/* Active class to trigger the transition */
+#main-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 2s ease, transform 2s ease;
+}
